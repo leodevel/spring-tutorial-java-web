@@ -24,38 +24,38 @@
             <div class="panel panel-default">
                 <div class="panel-heading" style="font-size: 20px;">
                     <center>
-                        <b>Cadastrar usuário</b>
+                        <b>Atualizar cadastro</b>
                     </center>
                 </div>
 
                 <div class="panel-body">
 
-                    <form:form method="POST" action="add" commandName="formUser" cssClass="form-horizontal">
+                    <form:form method="POST" action="update?id=${formUser.user.id}" commandName="formUser" cssClass="form-horizontal">
 
                         <div class="form-group">
                             <form:label path="user.name" cssClass="control-label col-sm-1" for="name">Nome: </form:label>
                                 <div class="col-sm-11">
-                                <form:input path="user.name" cssClass="form-control" placeholder="Informe o nome"/>
+                                <form:input value="${user.name}" path="user.name" cssClass="form-control" placeholder="Informe o nome"/>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <form:label path="user.tel" cssClass="control-label col-sm-1" for="tel">Telefone: </form:label>
                                 <div class="col-sm-11">
-                                <form:input path="user.tel" cssClass="form-control" placeholder="Informe o telefone"/>
+                                <form:input value="${user.tel}" path="user.tel" cssClass="form-control" placeholder="Informe o telefone"/>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <form:label path="user.address" cssClass="control-label col-sm-1" for="address">Endereço: </form:label>
                                 <div class="col-sm-11">
-                                <form:input path="user.address" cssClass="form-control" placeholder="Informe o endereço"/>
+                                <form:input value="${user.adrress}" path="user.address" cssClass="form-control" placeholder="Informe o endereço"/>
                             </div>
                         </div>
 
                         <div class="form-group"> 
                             <div class="col-sm-offset-1 col-sm-11">
-                                <button type="submit" class="btn btn-default">Cadastrar</button>
+                                <button type="submit" class="btn btn-default">Atualizar</button>
                             </div>
                         </div>
 

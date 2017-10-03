@@ -7,9 +7,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Usuários</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
               crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -21,24 +27,52 @@
                         <b>Cadastrar usuário</b>
                     </center>
                 </div>
-            </div>
 
-            <div class="panel-body">
+                <div class="panel-body">
 
-                <form:form method="POST" action="user/add" commandName="formUser">
-                    <table>
-                        <tr>
-                            <td><form:label path="user.name">Nome</form:label></td>
-                            <td><form:input path="user.name"/></td>
-                        </tr>                
-                        <tr>                    
-                            <td colspan="2">
-                                <input type="submit" value="Cadastrar"/>
-                            </td>
-                        </tr>
-                    </table>                
-                    <form:errors path="messageError" cssStyle="color:red"/>
-                </form:form>
+                    <form:form method="POST" action="add" commandName="formUser" cssClass="form-horizontal">
+
+                        <div class="form-group">
+                            <form:label path="user.name" cssClass="control-label col-sm-1" for="name">Nome: </form:label>
+                                <div class="col-sm-11">
+                                <form:input path="user.name" cssClass="form-control" placeholder="Informe o nome"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <form:label path="user.tel" cssClass="control-label col-sm-1" for="tel">Telefone: </form:label>
+                                <div class="col-sm-11">
+                                <form:input path="user.tel" cssClass="form-control" placeholder="Informe o telefone"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <form:label path="user.address" cssClass="control-label col-sm-1" for="address">Endereço: </form:label>
+                                <div class="col-sm-11">
+                                <form:input path="user.address" cssClass="form-control" placeholder="Informe o endereço"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group"> 
+                            <div class="col-sm-offset-1 col-sm-11">
+                                <button type="submit" class="btn btn-default">Cadastrar</button>
+                            </div>
+                        </div>
+
+                        <c:set var="error">
+                            <form:errors path="user"/>
+                        </c:set>    
+
+                        <c:if test="${not empty error}">
+                            <div class="alert alert-danger fade in col-sm-offset-1 col-sm-11">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                <strong>Erro!</strong> <form:errors path="user"/>
+                            </div> 
+                        </c:if>  
+
+                    </form:form>
+
+                </div>
 
             </div>
 
