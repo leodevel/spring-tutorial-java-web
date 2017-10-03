@@ -10,12 +10,21 @@ Este exemplo mostra o código fonte utilizado para listar, cadastrar, atualizar 
 
 ## Páginas ##
 
-#### Listagem de usuários ####
+#### Listar ####
 
-![alt text](https://github.com/leodevel/spring-tutorial-java-web/blob/master/img/add.png "Listagem de usuários")
+![alt text](https://github.com/leodevel/spring-tutorial-java-web/blob/master/img/list.png "Listagem de usuários")
 
+#### Cadastrar ####
 
+![alt text](https://github.com/leodevel/spring-tutorial-java-web/blob/master/img/add.png "Cadastrar usuário")
 
+#### Mensagem de erro ao cadastrar ####
+
+![alt text](https://github.com/leodevel/spring-tutorial-java-web/blob/master/img/error-add.png "Mensagem de erro ao cadastrar")
+
+#### Mensagem de sucesso após cadastrar ####
+
+![alt text](https://github.com/leodevel/spring-tutorial-java-web/blob/master/img/success-add.png "Mensagem de sucesso após cadastrar")
 
 
 
