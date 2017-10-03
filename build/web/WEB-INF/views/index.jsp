@@ -3,10 +3,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inicio</title>
+        <title>Usuários</title>
     </head>
     <body>
         <h1>Opções</h1>
-        <a href="#"></a>
+        <a href="user/list">Listar</a>
     </body>
 </html>
